@@ -7,8 +7,6 @@ body{
 }
 /*Defines the height and width of the board, aligns all the contents in the center and defines the grid as being 10 by 10*/
 .board{
-    width:100vw;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-content: center;
