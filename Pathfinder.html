@@ -10,9 +10,9 @@
 <body>
     <!--These are the three buttons for changing the cells-->
     <div class="button-group">
-        <button>Add Start</button>
-        <button>Add End</button>
-        <button>Add Wall</button>
+        <button onclick="SetAddStart()">Add Start</button>
+        <button onclick="SetAddEnd()">Add End</button>
+        <button onclick="SetAddWall()">Add Wall</button>
     </div>
     <!--This button is for starting the visualisation-->
     <div class="start-button">
@@ -21,9 +21,9 @@
 
     <!--100 cells on the board-->
     <div class="board" id="board">
-        <div class="cell start" data-cell></div>
-        <div class="cell end" data-cell></div>
-        <div class="cell wall" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -122,5 +122,50 @@
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
     </div>
+
+    <script>
+    //Stores the board div in a variable
+    var containingDiv = document.getElementById('board');
+    var SetCellValue = 0;
+    
+    //Add a click event listener onto the board 
+    containingDiv.addEventListener('click', function(e) {
+        //if it contains a cell, call the function
+        if(SetCellValue === 1){
+            if(e.target.classList.contains('cell')) {
+            AddStart(e.target);
+            }
+        }else if(SetCellValue ===2){
+            if(e.target.classList.contains('cell')) {
+            AddEnd(e.target);
+            }
+        }else if(SetCellValue ===3){
+            if(e.target.classList.contains('cell')) {
+            AddWall(e.target);
+            }
+        }
+    });  
+
+    function AddStart(e) {
+        e.classList.add('start');
+    }
+    function AddEnd(e) {
+        e.classList.add('end');
+    }
+    function AddWall(e) {
+        e.classList.add('wall');
+    }
+
+    function SetAddStart(){
+        SetCellValue = 1;
+    }
+    function SetAddEnd(){
+        SetCellValue = 2;
+    }
+    function SetAddWall(){
+        SetCellValue = 3;
+    }
+    </script>
+
 </body>
 </html>
