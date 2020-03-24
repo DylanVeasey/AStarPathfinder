@@ -127,15 +127,25 @@
     //Stores the board div in a variable
     var containingDiv = document.getElementById('board');
     var SetCellValue = 0;
+    var NumberOfStarts = 0;
+    var NumberOfEnds = 0;
     
     //Add a click event listener onto the board 
     containingDiv.addEventListener('click', function(e) {
         //if the set start button has been clicked, call AddStart
         if(SetCellValue === 1){  
-            AddStart(e.target); 
+            if(NumberOfStarts < 1){
+                AddStart(e.target); 
+            }else{
+                alert("There is already a start cell.")
+            }
         //if the set end button has been clicked, call AddEnd
         }else if(SetCellValue ===2){     
+            if(NumberOfEnds < 1){
             AddEnd(e.target);   
+            }else{
+                alert("There is already an end cell.")
+            }
         //if the set wall button has been clicked, call AddWall
         }else if(SetCellValue ===3){  
             AddWall(e.target);
@@ -145,10 +155,12 @@
     //A function to add the class of 'start' to a cell
     function AddStart(e) {
         e.classList.add('start');
+        NumberOfStarts ++;
     }
     //A function to add the class of 'end' to a cell
     function AddEnd(e) {
         e.classList.add('end');
+        NumberOfEnds ++;
     }
     //A function to add the class of 'wall' to a cell
     function AddWall(e) {
