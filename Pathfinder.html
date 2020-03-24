@@ -133,22 +133,67 @@
     //Add a click event listener onto the board 
     containingDiv.addEventListener('click', function(e) {
         //if the set start button has been clicked, call AddStart
-        if(SetCellValue === 1){  
-            if(NumberOfStarts < 1){
-                AddStart(e.target); 
-            }else{
+        if(SetCellValue === 1)
+        {  
+            //Checks if there is already a start cell
+            if(NumberOfStarts < 1)
+            {
+                //checks if the cell doesn't contain an end or a wall
+                if(!e.target.classList.contains("end") && !e.target.classList.contains("wall") )
+                {
+                    //Add a start cell
+                    AddStart(e.target); 
+                }
+                else
+                {
+                    //Tells the user there is already an end or wall cell here.
+                    alert("There is already a cell here.")
+                }
+            }
+            else
+            {
+                //Tells the user that there is already a start cell
                 alert("There is already a start cell.")
             }
         //if the set end button has been clicked, call AddEnd
-        }else if(SetCellValue ===2){     
-            if(NumberOfEnds < 1){
-            AddEnd(e.target);   
-            }else{
+        }
+        else if(SetCellValue === 2)
+        {     
+            //checks if there is already an end cell
+            if(NumberOfEnds < 1)
+            {
+                //checks if the cell doesn't contain a start or wall cell
+                if(!e.target.classList.contains("start") && !e.target.classList.contains("wall"))
+                {
+                    //Add an end cell
+                    AddEnd(e.target);   
+                }
+                else
+                {
+                    //Tells the user there is already a start or wall cell here.
+                    alert("There is already a cell here.")
+                }
+            }
+            else
+            {
+                //Tells the user there is already an end cell
                 alert("There is already an end cell.")
             }
         //if the set wall button has been clicked, call AddWall
-        }else if(SetCellValue ===3){  
-            AddWall(e.target);
+        }
+        else if(SetCellValue === 3)
+        {  
+            //checks if the cell doesn't contain a start or end cell
+            if(!e.target.classList.contains("start") && !e.target.classList.contains("end"))
+            {
+                //Add a wall cell
+                AddWall(e.target)
+            }
+            else
+            {
+                //Tells the user there is already a start or end cell
+                alert("There is already a cell here.")
+            }
         }
     });  
  
