@@ -18,8 +18,8 @@ body{
 }
 /*Defines the size of each cell to be 100 by 100px.  */
 .cell{
-    width: 100px;
-    height: 100px;
+    width: calc(100vh / 12);
+    height: calc(100vh / 12);
     border:1px solid black;
     display: flex;
     justify-content: center;
