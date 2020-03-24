@@ -1,0 +1,46 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+/*Removes all the margins of all the elements*/
+body{
+    margin: 0;
+}
+/*Defines the height and width of the board, aligns all the contents in the center and defines the grid as being 10 by 10*/
+.board{
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(10,auto);
+}
+/*Defines the size of each cell to be 100 by 100px.  */
+.cell{
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+/*Define the background color of the start cell*/
+.cell.start{
+    background-color:green ;
+}
+/*Defines the background color of the end cell*/
+.cell.end{
+    background-color: red;
+}
+/*Defines the background color of the wall cell*/
+.cell.wall{
+    background-color: grey;
+}
+
+
+
+
+
