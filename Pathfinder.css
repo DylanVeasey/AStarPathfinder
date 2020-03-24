@@ -39,7 +39,15 @@ body{
 .cell.wall{
     background-color: grey;
 }
-
+/*Set the position of the start button to be fixed and moves it 5% down from the top*/
+.start-button{
+    position: fixed;
+    top: 5%;
+}
+/*Set the position of the three buttons to be fixed*/
+.button-group{
+    position: fixed;
+}
 
 
 
