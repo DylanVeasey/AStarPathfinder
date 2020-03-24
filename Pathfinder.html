@@ -130,38 +130,40 @@
     
     //Add a click event listener onto the board 
     containingDiv.addEventListener('click', function(e) {
-        //if it contains a cell, call the function
-        if(SetCellValue === 1){
-            if(e.target.classList.contains('cell')) {
-            AddStart(e.target);
-            }
-        }else if(SetCellValue ===2){
-            if(e.target.classList.contains('cell')) {
-            AddEnd(e.target);
-            }
-        }else if(SetCellValue ===3){
-            if(e.target.classList.contains('cell')) {
+        //if the set start button has been clicked, call AddStart
+        if(SetCellValue === 1){  
+            AddStart(e.target); 
+        //if the set end button has been clicked, call AddEnd
+        }else if(SetCellValue ===2){     
+            AddEnd(e.target);   
+        //if the set wall button has been clicked, call AddWall
+        }else if(SetCellValue ===3){  
             AddWall(e.target);
-            }
         }
     });  
-
+ 
+    //A function to add the class of 'start' to a cell
     function AddStart(e) {
         e.classList.add('start');
     }
+    //A function to add the class of 'end' to a cell
     function AddEnd(e) {
         e.classList.add('end');
     }
+    //A function to add the class of 'wall' to a cell
     function AddWall(e) {
         e.classList.add('wall');
     }
 
+    //Sets the value of SetCellValue to 1 when the Add Start button is clicked.
     function SetAddStart(){
         SetCellValue = 1;
     }
+    //Sets the value of SetCellValue to 2 when the Add End button is clicked.
     function SetAddEnd(){
         SetCellValue = 2;
     }
+    //Sets the value of SetCellValue to 3 when the Add Wall button is clicked.
     function SetAddWall(){
         SetCellValue = 3;
     }
