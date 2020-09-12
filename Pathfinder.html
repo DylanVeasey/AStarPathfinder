@@ -16,111 +16,52 @@
     </div>
     <!--This button is for starting the visualisation-->
     <div class="start-button">
-        <button class="start-button">Start</button>
+        <button onclick="A_Star()" class="start-button">Start</button>
     </div>
 
     <!--100 cells on the board-->
     <div class="board" id="board">
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
+        <div class="cell" id="1,1"  ></div>
+        <div class="cell" id="2,1"  ></div>
+        <div class="cell" id="3,1"  ></div>
+        <div class="cell" id="4,1"  ></div>
+        <div class="cell" id="5,1"  ></div>
+        <div class="cell" id="6,1"  ></div>
+
+        <div class="cell" id="1,2"  ></div>
+        <div class="cell" id="2,2"  ></div>
+        <div class="cell" id="3,2"  ></div>
+        <div class="cell" id="4,2"  ></div>
+        <div class="cell" id="5,2"  ></div>
+        <div class="cell" id="6,2"  ></div>
+
+        <div class="cell" id="1,3"  ></div>
+        <div class="cell" id="2,3"  ></div>
+        <div class="cell" id="3,3"  ></div>
+        <div class="cell" id="4,3"  ></div>
+        <div class="cell" id="5,3"  ></div>
+        <div class="cell" id="6,3"  ></div>
+
+        <div class="cell" id="1,4"  ></div>
+        <div class="cell" id="2,4"  ></div>
+        <div class="cell" id="3,4"  ></div>
+        <div class="cell" id="4,4"  ></div>
+        <div class="cell" id="5,4"  ></div>
+        <div class="cell" id="6,4"  ></div>
+
+        <div class="cell" id="1,5"  ></div>
+        <div class="cell" id="2,5"  ></div>
+        <div class="cell" id="3,5"  ></div>
+        <div class="cell" id="4,5"  ></div>
+        <div class="cell" id="5,5"  ></div>
+        <div class="cell" id="6,5"  ></div>
+
+        <div class="cell" id="1,6"  ></div>
+        <div class="cell" id="2,6"  ></div>
+        <div class="cell" id="3,6"  ></div>
+        <div class="cell" id="4,6"  ></div>
+        <div class="cell" id="5,6"  ></div>
+        <div class="cell" id="6,6"  ></div>
     </div>
 
     <script>
@@ -223,6 +164,198 @@
     //Sets the value of SetCellValue to 3 when the Add Wall button is clicked.
     function SetAddWall(){
         SetCellValue = 3;
+    }
+
+    //Main A* function
+    function A_Star(){
+        const startpoint = document.getElementsByClassName('start')[0].id
+        const endpoint = document.getElementsByClassName('end')[0].id
+    
+        var startcoords = []
+        var endcoords = []
+        var start = {}
+        var end = {}
+        var openSet = [{}]
+        var closedSet =[{}]
+
+        startcoords = GetCoords(startpoint)
+        start.x = parseInt(startcoords[0])
+        start.y = parseInt(startcoords[1])
+
+        endcoords = GetCoords(endpoint)
+        end.x = endcoords[0]
+        end.y = endcoords[1]
+
+        openSet[0] = start
+
+        openSet[0].g = 0
+        openSet[0].h = GetHScore(start, end)
+        openSet[0].f = openSet[0].h + openSet[0].g
+
+
+        console.log("This is the f score of the start position: " + openSet[0].f)
+
+        while (openSet.length > 0){
+            var current = {}
+            current = FindLowestFValue(openSet)
+
+            if(current.x == end.x && current.y == end.y){
+                console.log("Current is the end")
+                reconstructPath(current, start)
+                break;
+            }
+            else{
+                console.log("Current is not the end")
+            }
+           
+            //remove current from openset 
+            let a = openSet.indexOf(current);
+            openSet.splice(a , 1)
+
+            //Add current to closed set
+            closedSet[closedSet.length] = current
+
+            //find all of the neighbors of the current cell 
+            var neighbours = [{}, {}, {}, {}, {}, {}, {}, {}, {}]
+
+            neighbours = FindNeighbours(current, neighbours)
+            console.log("These are currents neighbours: ")
+            console.log(neighbours)
+
+
+            //needs fixing :(
+            neighbours.forEach(neighbour =>{
+               if(neighbour.x != null){
+
+                    //Child is on the closedList
+                    closedSet.forEach(node =>{
+                        
+                    })
+
+                    //Calculate the f, g, and h values
+                    neighbour.g = current.g + d(current, neighbour)
+                    neighbour.h = GetHScore(neighbour, end)
+                    neighbour.f = neighbour.g + neighbour.h
+
+                    //Child is already in openList 
+
+
+
+                    //Add the child to the openList 
+                    neighbour.parentCell = current
+                    openSet[openSet.length] = neighbour
+    
+                       
+               }
+
+
+               
+            });
+           
+        }
+
+    }
+
+    function GetCoords(PointID){
+        var temp = []
+        temp = PointID.split(',')
+        return temp
+    }
+
+    function FindLowestFValue(openSet){
+        var lowestFValue = openSet[0].f;
+        var returnValue = openSet[0]
+        openSet.forEach(node => {
+            if(node.f < lowestFValue){
+                lowestFValue = node.f
+                returnValue = node
+               
+            }
+        });
+        console.log("This node has the lowest f value: ")
+        console.log(returnValue)
+        return returnValue
+    }
+
+    function FindNeighbours(CenterCell, neighbours){
+        var index = 0;
+        for(ChangeInXCoord = -1; ChangeInXCoord < 2; ChangeInXCoord++){
+            for(ChangeInYCoord = -1; ChangeInYCoord < 2; ChangeInYCoord++){ 
+                if(
+                    (parseInt(CenterCell.x) + (ChangeInXCoord)) > 0   &&
+                    (parseInt(CenterCell.y) + (ChangeInYCoord)) > 0 )
+                {
+                    var test = document.getElementById((parseInt(CenterCell.x) + (ChangeInXCoord)) + "," + (parseInt(CenterCell.y) + (ChangeInYCoord)))
+                    if(!(test.classList.contains('wall'))){
+                        neighbours[index].x = parseInt(CenterCell.x) + (ChangeInXCoord);
+                        neighbours[index].y = parseInt(CenterCell.y) + (ChangeInYCoord);
+                    }
+                    
+                }
+
+               
+                    
+                
+                
+                index++;
+            }
+        }
+        neighbours.splice(4,1)
+        return neighbours
+    }
+    
+    function GetGScore(){
+
+    }
+    
+    function GetHScore(node, end){
+        let HScore = 0.00
+        HScore = Math.sqrt(
+                    Math.pow(
+                        (end.x - node.x) , 2
+                    ) 
+                    + 
+                    Math.pow(
+                        (end.y - node.y)  , 2
+                    )
+                ,2)
+        return HScore
+    }
+
+    function d(current, neighbour){
+        var dScore = 0
+
+        dScore = Math.sqrt(
+                    Math.pow(
+                        (neighbour.x - current.x) , 2
+                    ) 
+                    + 
+                    Math.pow(
+                        (neighbour.y - current.y)  , 2
+                    )
+                ,2)
+
+        return dScore
+    }
+
+    function reconstructPath(current, start){
+        let pathSquare = current
+        console.log("reconstructing path");
+        console.log("Start: " + start.x + " , " + start.y )
+
+        while((pathSquare.parentCell.x != start.x) && (!pathSquare.parentCell.y != start.y)){
+           
+            let id = pathSquare.parentCell.x + "," + pathSquare.parentCell.y;
+
+            let test = document.getElementById(id);
+
+            console.log("Path: " + pathSquare.x + " , " + pathSquare.y)
+
+            test.classList.add('path');
+            pathSquare = pathSquare.parentCell
+        }
+        console.log("Path: " + pathSquare.x + " , " + pathSquare.y)
+       
     }
     </script>
 

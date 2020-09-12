@@ -12,7 +12,8 @@ body{
     align-content: center;
     justify-items: center;
     align-items: center;
-    grid-template-columns: repeat(10,auto);
+    grid-template-columns: repeat(6,auto);
+    margin-top:15%;
 }
 /*Defines the size of each cell to be 100 by 100px.  */
 .cell{
@@ -37,6 +38,13 @@ body{
 .cell.wall{
     background-color: grey;
 }
+.cell.path{
+    background-color:blue ;
+}
+.cell.neighbour{
+    background-color: purple;
+}
+
 /*Set the position of the start button to be fixed and moves it 5% down from the top*/
 .start-button{
     position: fixed;
